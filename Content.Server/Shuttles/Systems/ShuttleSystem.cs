@@ -1,3 +1,4 @@
+using Content.Server.Administration.Logs; //Moved on PR #27114 Wizard Заранее Imperial Space 
 using Content.Server.Body.Systems;
 using Content.Server.Doors.Systems;
 using Content.Server.Parallax;
@@ -33,7 +34,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly BiomeSystem _biomes = default!;
     [Dependency] private readonly BodySystem _bobby = default!;
     [Dependency] private readonly DockingSystem _dockSystem = default!;
-    [Dependency] private readonly DoorSystem _doors = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly FixtureSystem _fixtures = default!;
     [Dependency] private readonly MapLoaderSystem _loader = default!;
@@ -47,6 +47,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly ThrowingSystem _throwing = default!;
     [Dependency] private readonly ThrusterSystem _thruster = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly IAdminLogManager _logger = default!; //Moved on PR #27114 Wizard Заранее Imperial Space 
 
     public const float TileMassMultiplier = 0.5f;
 
@@ -62,8 +63,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         SubscribeLocalEvent<ShuttleComponent, ComponentStartup>(OnShuttleStartup);
         SubscribeLocalEvent<ShuttleComponent, ComponentShutdown>(OnShuttleShutdown);
 
-        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
-
         SubscribeLocalEvent<GridInitializeEvent>(OnGridInit);
         SubscribeLocalEvent<FixturesComponent, GridFixtureChangeEvent>(OnGridFixtureChange);
     }
@@ -72,11 +71,6 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     {
         base.Update(frameTime);
         UpdateHyperspace(frameTime);
-    }
-
-    private void OnRoundRestart(RoundRestartCleanupEvent ev)
-    {
-        CleanupHyperspace();
     }
 
     private void OnGridFixtureChange(EntityUid uid, FixturesComponent manager, GridFixtureChangeEvent args)

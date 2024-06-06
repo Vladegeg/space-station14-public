@@ -103,7 +103,7 @@
     tags:
       - Syndicate
   - type: RadarConsole
-    maxRange: 1536
+    maxRange: 384
   - type: WorldLoader
     radius: 1536
   - type: PointLight
@@ -964,6 +964,9 @@
       state: request
     - map: ["computerLayerKeys"]
       state: tech_key
+  - type: Anchorable
+    flags:
+    - Anchorable
   - type: CargoPalletConsole
   - type: ActivatableUI
     key: enum.CargoPalletConsoleUiKey.Sale
@@ -972,7 +975,7 @@
     - key: enum.CargoPalletConsoleUiKey.Sale
       type: CargoPalletConsoleBoundUserInterface
   - type: Computer
-    board: CargoRequestComputerCircuitboard
+    board: CargoPalletComputerCircuitboard # Imperial Space
   - type: PointLight
     radius: 1.5
     energy: 1.6
