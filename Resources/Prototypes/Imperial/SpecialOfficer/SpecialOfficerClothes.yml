@@ -2,6 +2,7 @@
   parent: ClothingUniformJumpskirtHoSAlt ## Комбез ОСО
   id: ClothingUniformJumpskirtSpecialOfficer
   name: SpecialOfficer uniform
+  suffix: ДСО
   description: A form that instills fear in enemies of NanoTrasen
   components:
   - type: Sprite
@@ -13,6 +14,7 @@
   parent: ClothingNeckBase ## Плащ ОСО
   id: ClothingNeckCloakSpecialOfficer
   name: Special Officer cloack
+  suffix: ДСО
   description: It's black color makes your heart beat faster
   components:
   - type: Sprite
@@ -22,6 +24,7 @@
   parent: ClothingHeadBase ## Фуражка ОСО
   id: ClothingHeadHatSpecialOfficer
   name: Special Officer hat cap
+  suffix: ДСО
   description: She inspires confidence in you
   components:
   - type: Sprite
@@ -33,6 +36,7 @@
   parent: ClothingShoesBootsJack ## Ботинки с уникальным звуком ОСО
   id: ClothingShoesBootsJackSpecialOfficer
   name: Shoes boots for Special Officer
+  suffix: ДСО
   description: You can see the baked blood on them
   components:
   - type: Sprite
