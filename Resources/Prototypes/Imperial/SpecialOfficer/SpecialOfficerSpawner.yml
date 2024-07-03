@@ -18,6 +18,7 @@
   parent: MobHuman
   id: SpecialOfficerPreset
   name: Special Officer
+  suffix: ДСО
   components:
     - type: RandomMetadata
       nameSegments:
