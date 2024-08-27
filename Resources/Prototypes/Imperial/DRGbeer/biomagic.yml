@@ -5,14 +5,14 @@
   noSpawn: true
   components:
   - type: WorldTargetAction
-    useDelay: 30 #ибо нехуй спамить заклинанием на сон
+    useDelay: 80 #ибо нехуй спамить заклинанием на сон
     itemIconStyle: BigAction
     checkCanAccess: false
     range: 60
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/fireball.ogg
     icon:
-      sprite: imperial/DRGbeer/gnomeprojectile.rsi
+      sprite: Imperial/DRGbeer/gnomeprojectile.rsi
       state: spell
     event: !type:ProjectileSpellEvent
       prototype: BulletGnomish

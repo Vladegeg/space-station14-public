@@ -37,7 +37,7 @@
     sound: !type:SoundPathSpecifier
       path: /Audio/Magic/fireball.ogg
     icon:
-      sprite: imperial/DRGbeer/spells.rsi
+      sprite: Imperial/DRGbeer/spells.rsi
       state: Reincarnation-Clown
     event: !type:ProjectileSpellEvent
       prototype: ProjectilePolyboltGnomish
@@ -65,16 +65,16 @@
   noSpawn: true
   components:
   - type: WorldTargetAction
-    useDelay: 50
+    useDelay: 200
     range: 4
     itemIconStyle: BigAction
     icon:
-      sprite: imperial/DRGbeer/spells.rsi
+      sprite: Imperial/DRGbeer/spells.rsi
       state: gnomes
     event: !type:WorldSpawnSpellEvent
       prototypes:
       - id: MobGnome
-        amount: 3
+        amount: 2 # Нерф количества гномов из заклинания
       offset: 0, 1
       speech: action-speech-spell-SpawnGome
 
@@ -103,7 +103,7 @@
     range: 4
     itemIconStyle: BigAction
     icon:
-      sprite: imperial/DRGbeer/spells.rsi
+      sprite: Imperial/DRGbeer/spells.rsi
       state: Soporificfog
     event: !type:WorldSpawnSpellEvent
       prototypes:
