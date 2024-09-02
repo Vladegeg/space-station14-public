@@ -99,3 +99,6 @@ ent-VlPCGeishaBoots = Туфли
 
 ent-VlPCMask = Нежная маска
     .desc = Её приятно гладить...
+
+ent-VlPCKomb = Комбинезон
+    .desc = Стандартный комбинезон сотрудниц Purple Chase.
