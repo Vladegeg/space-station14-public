@@ -45,28 +45,44 @@
     sprite: Imperial/VlClothes/PurpleChase/GeishaComb.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingOuterStorageBase
   id: VlPCUniformOne
   name: Women's uniforms
   suffix: Vl, PurpleChase
   description: The standard clothing of Purple Chase employees.
   components:
+  - type: Item
+    size: Normal
   - type: Sprite
     sprite: Imperial/VlClothes/PurpleChase/CombOne.rsi
   - type: Clothing
     sprite: Imperial/VlClothes/PurpleChase/CombOne.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingOuterStorageBase
   id: VlPCUniformTwo
   name: Women's uniforms
   suffix: Vl, PurpleChase
   description: The standard clothing of Purple Chase employees.
   components:
+  - type: Item
+    size: Normal
   - type: Sprite
     sprite: Imperial/VlClothes/PurpleChase/CombTwo.rsi
   - type: Clothing
     sprite: Imperial/VlClothes/PurpleChase/CombTwo.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: VlPCKomb
+  name: Overall
+  suffix: Vl, PurpleChase
+  description: Jumpsuit for PurpleChase employees.
+  components:
+  - type: Sprite
+    sprite: Imperial/VlClothes/PurpleChase/Komb.rsi
+  - type: Clothing
+    sprite: Imperial/VlClothes/PurpleChase/Komb.rsi
 
 - type: entity
   parent: ClothingUniformBase
