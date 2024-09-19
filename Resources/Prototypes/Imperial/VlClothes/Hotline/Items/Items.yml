@@ -93,7 +93,7 @@
     - BaseballBat
 
 - type: entity
-  parent: BaseItem
+  parent: BaseHandheldInstrument
   id: VlHotlineRecorder
   name: The old player
   suffix: Vl, Hotline
@@ -102,21 +102,14 @@
   - type: Sprite
     sprite: Imperial/VlClothes/Hotline/Recorder.rsi
     state: icon
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Imperial/Hotline/music.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Imperial/Hotline/music.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Imperial/Hotline/music.ogg
-  - type: UseDelay
-    delay: 200.0
   - type: Tag
     tags:
-    - ClownRecorder
     - Payload
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: Wires
+    boardName: wires-board-name-dawinstrument
+    layoutId: DawInstrument
 
 - type: entity
   id: VlHotlineBag
