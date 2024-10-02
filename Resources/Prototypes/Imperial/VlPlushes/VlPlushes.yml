@@ -72,7 +72,7 @@
       - id: ClothingHeadFlowerDSOWhite
 
 - type: entity
-  name: Спавнер рандомного плюша Адрианы
+  name: Spawner
   id: AdriPlushieSpawner
   suffix: Vl, COMMUNITY,TOY
   parent: MarkerBase
